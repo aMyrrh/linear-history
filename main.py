@@ -2,10 +2,11 @@ print("Hello, World!")
 
 def fib(n):
     if n == 1:
-        return 0
-    if n == 2:
-        return 1
+        print(0)
     else:
-        return fib(n-1) + fib(n-2)
+        lst = [0, 1]
+        for i in range(2, n):
+            lst.append(lst[i - 2] + lst[i - 1])
+        print(*lst, sep='\n')
 
-print(fib(10))
+fib(10)
